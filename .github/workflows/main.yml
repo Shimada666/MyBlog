@@ -19,6 +19,6 @@ jobs:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           EXTERNAL_REPOSITORY: Shimada666/Shimada666.github.io
           PUBLISH_BRANCH: master
-          PUBLISH_DIR: docs/.vuepress/dist
+          PUBLISH_DIR: dist
         with:
           emptyCommits: false
