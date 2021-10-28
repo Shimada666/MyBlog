@@ -20,7 +20,8 @@ module.exports = {
         ],
         sidebar: {
             '/blog/': [
-                ''
+                '',
+                '痛苦日记'
             ]
         },
         sidebarDepth: 3
