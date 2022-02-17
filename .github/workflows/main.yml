@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm i
-      - run: npm run docs:build
+      - run: pnpm i
+      - run: pnpm run docs:build
 
       - name: Deploy Shimada666.github.io/master
         uses: peaceiris/actions-gh-pages@v2
