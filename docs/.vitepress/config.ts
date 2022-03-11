@@ -10,7 +10,7 @@ module.exports = {
             'link',
             {
                 rel: 'icon',
-                href: '/diana.jpg',//图片放在public文件夹下
+                href: 'http://cdn.corgi.plus/uPic/diana.jpg',//图片放在public文件夹下
             },
         ],
     ],
