@@ -5,6 +5,13 @@ import { useData } from "vitepress"
 
 const { Layout } = DefaultTheme
 
+const SCRIPT_SRC = 'https://beaudar.lipk.org/client.js'
+const REPO_URL = 'Shimada666/MyBlog'
+const ISSUE_TERM = 'pathname'
+const CROSS_ORIGIN = 'anonymous'
+const LABEL = '💬 评论'
+const THEME = 'github-light'
+
 function refreshBeaudar() {
   const beaudar = document.getElementById('beaudar');
   if (!beaudar) {
@@ -12,19 +19,19 @@ function refreshBeaudar() {
   }
   beaudar.innerHTML = ''
   var script = document.createElement('script');
-  script.src = 'https://beaudar.lipk.org/client.js';
-  script.setAttribute('repo', 'Shimada666/MyBlog');
-  script.setAttribute('issue-term', 'pathname');
-  script.setAttribute('crossorigin', 'anonymous');
-  script.setAttribute('label', 'Comment')
-  script.setAttribute('theme', 'github-light');
+  script.src = SCRIPT_SRC;
+  script.setAttribute('repo', REPO_URL);
+  script.setAttribute('issue-term', ISSUE_TERM);
+  script.setAttribute('crossorigin', CROSS_ORIGIN);
+  script.setAttribute('label', LABEL)
+  script.setAttribute('theme', THEME)
   script.async = true;
   beaudar.appendChild(script);
 }
 
 const { title } = useData()
 
-watch(title, () => refreshBeaudar())
+watch(title, () => refreshBeaudar(), {immediate: true})
 
 </script>
 
@@ -34,12 +41,12 @@ watch(title, () => refreshBeaudar())
       <div style="margin-top: 16px;" id="beaudar">
         <component
           is="script"
-          src="https://beaudar.lipk.org/client.js"
-          repo="Shimada666/MyBlog"
-          label="Comment"
-          issue-term="pathname"
-          theme="github-light"
-          crossorigin="anonymous"
+          :src="SCRIPT_SRC"
+          :repo="REPO_URL"
+          :label="LABEL"
+          :issue-term="ISSUE_TERM"
+          :theme="THEME"
+          :crossorigin="CROSS_ORIGIN"
           async></component>
       </div>
     </template>
