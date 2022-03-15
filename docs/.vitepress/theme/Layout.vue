@@ -14,7 +14,7 @@ const { Layout } = DefaultTheme
           src="https://beaudar.lipk.org/client.js"
           repo="Shimada666/MyBlog"
           label="Comment"
-          issue-term="url"
+          issue-term="pathname"
           theme="github-light"
           crossorigin="anonymous"
           async></component>
