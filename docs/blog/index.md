@@ -2,4 +2,4 @@
 
 xb
 
-* [痛苦日记](./pain-diary.md)
+* [痛苦日记](./PainDiary.md)

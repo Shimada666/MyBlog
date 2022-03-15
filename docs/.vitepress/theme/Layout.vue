@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import DefaultTheme from 'vitepress/theme'
+
 const { Layout } = DefaultTheme
 
 </script>
@@ -7,15 +8,17 @@ const { Layout } = DefaultTheme
 <template>
   <Layout>
     <template #page-bottom-ads>
-      <component
+      <div style="margin-top: 16px;">
+        <component
           is="script"
           src="https://beaudar.lipk.org/client.js"
           repo="Shimada666/MyBlog"
           label="Comment"
-          issue-term="pathname"
+          issue-term="url"
           theme="github-light"
           crossorigin="anonymous"
           async></component>
+      </div>
     </template>
   </Layout>
 </template>
