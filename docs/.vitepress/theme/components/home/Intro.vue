@@ -4,13 +4,6 @@
       <div class="title">Shimada666</div>
       <div class="sub-title">「于是转身向大海走去」</div>
     </div>
-    <!--<h1><img src="http://cdn.corgi.plus/uPic/diana.jpg" width="80" height="80" loading="lazy"-->
-    <!--         class="inline rounded-full object-center md:h-20 md:w-20 h-12 w-12 object-cover">-->
-    <!--  <span class="text-2xl ml-4">Shimada666</span>-->
-    <!--</h1>-->
-    <!--<p>-->
-    <!--  和所有的烦恼说拜拜，和所有的快乐说嗨嗨-->
-    <!--</p>-->
   </div>
 </template>
 

@@ -12,7 +12,7 @@ export default defineConfig({
       'link',
       {
         rel: 'icon',
-        href: 'http://cdn.corgi.plus/uPic/diana.jpg',//图片放在public文件夹下
+        href: '/favicon.ico',//图片放在public文件夹下
       },
     ],
   ],
