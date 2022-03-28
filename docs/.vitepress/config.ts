@@ -1,14 +1,8 @@
-import { defineConfig } from 'vitepress'
-
-function getBlogSidebar() {
-  return [
-    { text: '痛苦日记', link: '/blog/PainDiary' },
-    { text: '构建博客', link: '/blog/BuildBlog' }
-  ]
-}
+import { getPosts } from "../util";
+import { defineConfig } from "vitepress";
 
 export default defineConfig({
-  title: 'Simple Blog',
+  title: '鼠鼠屋 🐭',
   description: '一些简单的东西',
   base: '/', //  部署时的路径 默认 /  可以使用二级地址 /base/
   lang: 'zh-CN', //语言
@@ -24,15 +18,17 @@ export default defineConfig({
   ],
   // 主题配置
   themeConfig: {
+    // @ts-ignore
+    posts: getPosts(),
     lastUpdated: 'Last Updated',
     nav: [
       { text: '主页', link: '/' },
-      { text: '博客', link: '/blog/' },
       { text: 'Github', link: 'https://github.com/Shimada666' }
     ],
-    sidebar: {
-      '/blog/': getBlogSidebar(),
-    },
+    sidebar: false,
+    // sidebar: {
+    //   '/blog/': getBlogSidebar(),
+    // },
     // algolia: {
     //     appKey: '',
     //     indexName: '',
