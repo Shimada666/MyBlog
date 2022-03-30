@@ -32,24 +32,14 @@ const posts = theme.value.posts
 </template>
 
 <style lang="scss" scoped>
-// Variables
-
-$brand-primary: #0085a1;
-$brand-gray: #a3a3a3;
-
-$gray-dark: lighten(black, 25%);
-$gray-light: lighten(black, 75%);
-
-$white-faded: fade(white, 80%);
-
 .post-preview {
   a {
-    color: $gray-dark;
+    color: var(--gray-dark);
 
     &:hover,
     &:focus {
       text-decoration: none;
-      color: $brand-primary;
+      color: var(--brand-primary);
     }
 
     .post-title {
@@ -70,18 +60,18 @@ $white-faded: fade(white, 80%);
 
   .post-meta {
     font-family: 'Lora', 'Times New Roman', serif;
-    color: $brand-gray;
+    color: var(--brand-gray);
     font-size: 16px;
     font-style: italic;
     margin-top: 0;
 
     a {
       text-decoration: none;
-      color: $gray-dark;
+      color: var(--gray-dark);
 
       &:hover,
       &:focus {
-        color: $brand-primary;
+        color: var(--brand-primary);
         text-decoration: underline;
       }
     }
@@ -109,10 +99,14 @@ $white-faded: fade(white, 80%);
   line-height: 1.7;
   font-size: 13px;
   font-style: italic;
-  color: $brand-gray;
+  color: var(--brand-gray);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 
   &:hover {
-    color: $brand-primary;
+    color: var(--brand-primary);
   }
 
   @media only screen and (min-width: 768px) {

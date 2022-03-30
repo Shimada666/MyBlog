@@ -12,7 +12,7 @@ export function getPosts() {
         frontMatter: {
           title: data.title || '',
           tags: data.tags || [],
-          description: data.description || content.slice(0, 100),
+          description: data.description || content.slice(0, 300),
           dateString: data.date ? data.date.toDateString() : '',
           ...data
         },

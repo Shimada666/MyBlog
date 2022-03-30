@@ -1,5 +1,5 @@
 <template>
-  <div class="intro-header">
+  <div class="home-header">
     <div class="text-center">
       <div class="title">Shimada666</div>
       <div class="sub-title">「于是转身向大海走去」</div>
@@ -11,7 +11,7 @@
 </script>
 
 <style scoped lang="scss">
-.intro-header {
+.home-header {
   background: rgb(0, 0, 0, 0.5) url("http://cdn.corgi.plus/uPic/20220328_173430_moon.png") no-repeat center center;
   background-size: cover;
   width: 100%;
@@ -33,7 +33,7 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .intro-header {
+  .home-header {
     height: 240px;
     .title {
       font-size: 40px;
