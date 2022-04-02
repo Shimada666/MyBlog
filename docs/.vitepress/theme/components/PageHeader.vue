@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { useData } from "vitepress";
+import { useData } from 'vitepress'
 
-const { page } = useData();
-
+const { page, theme } = useData()
 </script>
 
 <template>
+  {{ theme }}
   <div class="page-header style-text">
     <div class="post-heading">
       <div class="tags">

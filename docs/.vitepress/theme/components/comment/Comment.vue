@@ -1,6 +1,6 @@
 <template>
   <ClientOnly>
-    <Beaudar></Beaudar>
+    <Beaudar />
   </ClientOnly>
 </template>
 

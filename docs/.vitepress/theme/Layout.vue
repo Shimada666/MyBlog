@@ -1,10 +1,9 @@
 <script lang="ts" setup>
 import DefaultTheme from 'vitepress/theme'
-import Pages from "./components/Pages.vue"
-import Intro from "./components/home/Intro.vue"
-import Comment from "./components/comment/Comment.vue";
-import PageHeader from "./components/PageHeader.vue";
-
+import Pages from './components/Pages.vue'
+import Intro from './components/home/Intro.vue'
+import Comment from './components/comment/Comment.vue'
+import PageHeader from './components/PageHeader.vue'
 const { Layout } = DefaultTheme
 
 </script>
@@ -14,18 +13,18 @@ const { Layout } = DefaultTheme
     <Layout>
       <template #page-bottom-ads>
         <ClientOnly>
-          <Comment></Comment>
+          <Comment />
         </ClientOnly>
       </template>
       <template #page-top>
-        <PageHeader></PageHeader>
+        <PageHeader />
       </template>
       <!-- Home slot-->
       <template #home-hero>
-        <Intro></Intro>
+        <Intro />
       </template>
       <template #home-features>
-        <Pages></Pages>
+        <Pages />
       </template>
     </Layout>
   </div>

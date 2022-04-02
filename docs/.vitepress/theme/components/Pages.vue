@@ -1,28 +1,30 @@
 <script lang="ts" setup>
-import { useData, withBase } from "vitepress";
+import { useData, withBase } from 'vitepress'
 
-const { theme } = useData();
+const { theme } = useData()
 const posts = theme.value.posts
-
 
 </script>
 
 <template>
   <div class="px-5 sm:px-7 md:px-10 max-w-5xl mx-auto">
     <div class="mt-12">
-      <div class="post-preview" v-for="(post, index) in posts" :key="index">
-        <div v-if="post.frontMatter.title">
+      <div
+        v-for="(post, index) in posts"
+        :key="index"
+        class="post-preview">
+        <div v-if="post.frontmatter.title">
           <a :href="withBase(post.regularPath)">
             <div class="post-title">
-              {{ post.frontMatter.title }}
+              {{ post.frontmatter.title }}
             </div>
-            <h3 class="post-subtitle" v-if="post.frontMatter.subTitle">{{ post.frontMatter.subTitle }}</h3>
+            <h3 v-if="post.frontmatter.subTitle" class="post-subtitle">{{ post.frontmatter.subTitle }}</h3>
             <div class="post-content-preview">
-              {{ post.frontMatter.description }}
+              {{ post.frontmatter.description }}
             </div>
           </a>
           <p class="post-meta">
-            Posted by Shimada666 on {{ post.frontMatter.dateString }}
+            Posted by Shimada666 on {{ post.frontmatter.dateString }}
           </p>
           <hr>
         </div>
@@ -100,6 +102,7 @@ const posts = theme.value.posts
   font-size: 13px;
   font-style: italic;
   color: var(--brand-gray);
+  // 多行截断
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
