@@ -5,7 +5,6 @@ const { page, theme } = useData()
 </script>
 
 <template>
-  {{ theme }}
   <div class="page-header style-text">
     <div class="post-heading">
       <div class="tags">
