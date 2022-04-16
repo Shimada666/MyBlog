@@ -2,7 +2,7 @@
   <div class="home-header">
     <div class="text-center">
       <div class="title">Shimada666</div>
-      <div class="sub-title">「于是转身向大海走去」</div>
+      <div class="sub-title">「從何時開始對悲劇的嚮往 圓滿了整個心臟」</div>
     </div>
   </div>
 </template>

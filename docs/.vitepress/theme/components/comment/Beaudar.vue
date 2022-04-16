@@ -1,14 +1,13 @@
 <template>
   <div id="beaudar" style="margin-top: 16px;">
     <component
-      is="script"
+      :is="'script'"
       :src="SCRIPT_SRC"
       :repo="REPO_URL"
       :label="LABEL"
       :issue-term="ISSUE_TERM"
       :theme="THEME"
-      :crossorigin="CROSS_ORIGIN"
-      async />
+      :crossorigin="CROSS_ORIGIN" />
   </div>
 </template>
 

@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import WindiCSS from 'vite-plugin-windicss'
 import { join } from 'path'
 
-export default defineConfig(async({ command }) => {
+export default defineConfig(async ({ command }) => {
   return {
     plugins: [
       WindiCSS({
@@ -11,16 +11,16 @@ export default defineConfig(async({ command }) => {
           dirs: [
             __dirname,
             join(__dirname, '.vitepress', 'theme'),
-            join(__dirname, '.vitepress', 'theme', 'components'),
-          ],
-        },
+            join(__dirname, '.vitepress', 'theme', 'components')
+          ]
+        }
       })
     ],
 
     optimizeDeps: {
       include: [
-        'vue',
-      ],
-    },
+        'vue'
+      ]
+    }
   }
 })

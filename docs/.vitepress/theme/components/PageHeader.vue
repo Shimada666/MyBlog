@@ -1,11 +1,13 @@
 <script lang="ts" setup>
 import { useData } from 'vitepress'
+import { useCurrentPage } from '../../../page-util'
 
 const { page, theme } = useData()
+const { isPost } = useCurrentPage()
 </script>
 
 <template>
-  <div class="page-header style-text">
+  <div v-if="isPost" class="page-header style-text">
     <div class="post-heading">
       <div class="tags">
         <a
