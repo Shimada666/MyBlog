@@ -19,14 +19,16 @@ export interface BlogData {
 }
 
 export function getTagsAndPosts (): BlogData {
-  const tags: string[] = []
+  const tags: Set<string> = new Set()
   const posts = globby.sync(['**.md'], { ignore: ['node_modules', 'README.md'] })
     .filter((item) => item.includes('blog/'))
     .map((item) => {
       const file = fs.readFileSync(item, 'utf-8')
       const { data, content } = matter(file)
       if (data.tags) {
-        tags.push(...data.tags)
+        for (const tag of data.tags) {
+          tags.add(tag)
+        }
       }
       return {
         frontmatter: {
@@ -41,7 +43,10 @@ export function getTagsAndPosts (): BlogData {
     })
     // @ts-ignore
     .sort((p1, p2) => p1.frontmatter.date < p2.frontmatter.date ? 1 : -1)
-  return { tags, posts }
+  return {
+    tags: [...tags],
+    posts
+  }
 }
 
 export declare const data: BlogData

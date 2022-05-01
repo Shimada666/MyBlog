@@ -33,7 +33,7 @@ const filterPosts = computed(() => {
             </div>
           </a>
           <p class="post-meta">
-            Posted by Shimada666 on {{ post.frontmatter.dateString }}
+            Posted on {{ post.frontmatter.dateString }}
           </p>
           <hr>
         </div>

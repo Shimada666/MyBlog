@@ -18,7 +18,7 @@ const { isPost } = useCurrentPage()
       </div>
       <h1>{{ page.title }}</h1>
       <div class="subheading">{{ page.frontmatter.subTitle }}</div>
-      <span class="meta">Posted by Shimada666 on {{ new Date(page.frontmatter.date).toDateString() }}</span>
+      <span class="meta">Posted on {{ new Date(page.frontmatter.date).toDateString() }}</span>
     </div>
   </div>
 </template>

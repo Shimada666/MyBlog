@@ -17,10 +17,6 @@ export default defineConfig({
   ],
   // 主题配置
   themeConfig: {
-    // customData: {
-    //   posts,
-    //   tags
-    // },
     lastUpdated: 'Last Updated',
     nav: [
       { text: '主页', link: '/' },
