@@ -55,7 +55,7 @@ const filterPosts = computed(() => {
 </template>
 
 <style lang="scss" scoped>
-@import "../../../public/variables.scss";
+@import "../../styles/variables.scss";
 
 .post-preview {
   a {

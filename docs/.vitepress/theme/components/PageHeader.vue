@@ -2,8 +2,9 @@
 import { useData } from 'vitepress'
 import { useCurrentPage } from '../../../page-util'
 
-const { page, theme } = useData()
+const { page } = useData()
 const { isPost } = useCurrentPage()
+
 </script>
 
 <template>

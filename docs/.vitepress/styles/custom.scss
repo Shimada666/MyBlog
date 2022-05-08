@@ -1,0 +1,46 @@
+/* pc + mobile start */
+.sidebar-links {
+    padding: 0;
+}
+.sidebar > .sidebar-links > .sidebar-link + .sidebar-link {
+    padding-top: 0;
+}
+.sidebar > .sidebar-links > .sidebar-link > .sidebar-link-item {
+    font-size: 0.875rem;
+    padding: 0.1rem 0 0.1rem 1.2rem;
+}
+.sidebar > .sidebar-links > .sidebar-link > .sidebar-links > .sidebar-link > .sidebar-link-item {
+    font-size: 0.875rem;
+    padding: 0.2rem 1.5rem 0.2rem 2rem;
+}
+/* pc + mobile end */
+
+.page {
+    margin-left: 0 !important;
+}
+
+/*mobile*/
+@media screen and (max-width: 720px) {
+    .sidebar-button {
+        left:0.5rem
+    }
+}
+/*pc -  adjust the header and sidebar's position */
+@media screen and (min-width: 720px) {
+    .sidebar {
+        left: auto !important;
+        right: 1rem !important;
+        border-right: none !important;
+        padding-top: 4rem !important;
+        width: 14rem !important;
+    }
+    .sidebar > .sidebar-links {
+        border-left: 1px solid var(--c-divider-light);
+        padding: 0.5rem 0;
+    }
+    .sidebar-link-item {
+        border-left-width: 1px;
+        margin-left: -1px;
+    }
+}
+
