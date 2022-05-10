@@ -2,6 +2,7 @@
 import { withBase } from 'vitepress'
 import { data as blogData } from '../../../blog/blog.data'
 import { computed, ref } from 'vue'
+import dayjs from 'dayjs'
 
 const filterTag = ref('Show All')
 const { posts, tags } = blogData
@@ -33,7 +34,7 @@ const filterPosts = computed(() => {
             </div>
           </a>
           <p class="post-meta">
-            Posted on {{ post.frontmatter.dateString }}
+            <span>Last Updated on {{ dayjs(post.frontmatter.lastUpdated).format('YYYY-MM-DD') }}</span>
           </p>
           <hr>
         </div>
@@ -70,7 +71,7 @@ const filterPosts = computed(() => {
     .post-title {
       font-size: 21px;
       line-height: 1.3;
-      margin-top: 30px;
+      margin-top: 24px;
       margin-bottom: 8px;
     }
 
@@ -86,9 +87,11 @@ const filterPosts = computed(() => {
   .post-meta {
     font-family: 'Lora', 'Times New Roman', serif;
     color: var(--brand-gray);
-    font-size: 16px;
+    font-size: 14px;
     font-style: italic;
-    margin-top: 0;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
 
     a {
       text-decoration: none;
@@ -122,7 +125,7 @@ const filterPosts = computed(() => {
 
 .post-content-preview {
   line-height: 1.7;
-  font-size: 13px;
+  font-size: 14px;
   font-style: italic;
   color: var(--brand-gray);
   // 多行截断
@@ -136,7 +139,7 @@ const filterPosts = computed(() => {
   }
 
   @media only screen and (min-width: 768px) {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 

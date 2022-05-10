@@ -6,11 +6,11 @@
   --gray-light: lighten(black, 75%);
 
   --white-faded: fade(white, 80%);
+  --c-brand: var(--brand-primary);
 }
 
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   border: 0;
   border-top: 1px solid #eee;
 }

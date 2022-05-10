@@ -1,5 +1,4 @@
 ---
-date: 2022-05-01
 title: Vue2项目迁移Vite
 tags: 
   - 前端
