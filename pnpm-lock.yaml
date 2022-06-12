@@ -18,6 +18,7 @@ specifiers:
   jquery: ^3.6.0
   jsdom: ^19.0.0
   lodash: ^4.17.21
+  markdown-it-plantuml: ^1.4.1
   sass: ^1.49.9
   tailwindcss: npm:@tailwindcss/postcss7-compat@2.1.4
   typescript: ^4.4.2
@@ -45,6 +46,7 @@ dependencies:
   jquery: registry.npmmirror.com/jquery/3.6.0
   jsdom: registry.npmmirror.com/jsdom/19.0.0
   lodash: registry.npmmirror.com/lodash/4.17.21
+  markdown-it-plantuml: registry.npmmirror.com/markdown-it-plantuml/1.4.1
   sass: registry.npmmirror.com/sass/1.49.9
   tailwindcss: registry.npmmirror.com/@tailwindcss/postcss7-compat/2.1.4
   typescript: registry.npmmirror.com/typescript/4.6.3
@@ -2813,6 +2815,12 @@ packages:
     version: 0.25.7
     dependencies:
       sourcemap-codec: registry.npmmirror.com/sourcemap-codec/1.4.8
+
+  registry.npmmirror.com/markdown-it-plantuml/1.4.1:
+    resolution: {integrity: sha512-13KgnZaGYTHBp4iUmGofzZSBz+Zj6cyqfR0SXUIc9wgWTto5Xhn7NjaXYxY0z7uBeTUMlc9LMQq5uP4OM5xCHg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/markdown-it-plantuml/-/markdown-it-plantuml-1.4.1.tgz}
+    name: markdown-it-plantuml
+    version: 1.4.1
+    dev: false
 
   registry.npmmirror.com/merge2/1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/merge2/-/merge2-1.4.1.tgz}

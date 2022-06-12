@@ -17,5 +17,10 @@ export default defineConfig({
     ],
     nextLinks: true,
     prevLinks: true
+  },
+  markdown: {
+    config: (md) => {
+      md.use(require('markdown-it-plantuml'))
+    }
   }
 })
