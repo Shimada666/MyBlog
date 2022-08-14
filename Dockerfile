@@ -1,8 +1,8 @@
-FROM node:12-slim AS build
+FROM node:14 AS build
 WORKDIR /app
 COPY . /app
 ENV NPM_REGISTRY https://registry.npm.taobao.org
-RUN yarn --registry=$NPM_REGISTRY && yarn build
+RUN npm install -g pnpm --registry=$NPM_REGISTRY && pnpm i && pnpm docs:build
 
 FROM nginx:stable-alpine
 COPY --from=build /app/docs/.vitepress/dist /usr/share/nginx/html
