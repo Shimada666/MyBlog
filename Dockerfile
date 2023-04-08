@@ -1,4 +1,4 @@
-FROM node:14 AS build
+FROM node:16-slim AS build
 WORKDIR /app
 COPY . /app
 ENV NPM_REGISTRY https://registry.npm.taobao.org
