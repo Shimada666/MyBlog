@@ -12,7 +12,7 @@ export default defineConfig({
     lastUpdated: 'Last Updated',
     nav: [
       { text: '主页', link: '/' },
-      { text: '分类', link: '/tags' },
+      // { text: '分类', link: '/tags' },
       { text: 'Github', link: 'https://github.com/Shimada666' }
     ],
     nextLinks: true,

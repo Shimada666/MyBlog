@@ -27,7 +27,7 @@ function getGitLastUpdatedTimeStamp (filePath): number {
       'git',
       ['log', '-1', '--format=%at', path.basename(filePath)],
       { cwd: path.dirname(filePath) }
-    ).stdout.toString('utf-8')) * 1000
+    ).stdout.toString('utf-8')) * 1000 || +new Date()
   } catch (e) { /* do not handle for now */ }
   return lastUpdated
 }
