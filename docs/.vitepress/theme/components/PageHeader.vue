@@ -20,7 +20,7 @@ const { isPost } = useCurrentPage()
       </div>
       <h1>{{ page.title }}</h1>
       <div class="subheading">{{ page.frontmatter.subTitle }}</div>
-      <span class="meta">{{ theme.lastUpdated }} on {{ dayjs(page.lastUpdated).format('YYYY-MM-DD') }}</span>
+      <span class="meta">{{ theme.lastUpdated }} on {{ dayjs(page.lastUpdated || + new Date()).format('YYYY-MM-DD') }}</span>
     </div>
   </div>
 </template>
