@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # 部署名字
+  name: pzblog
+  namespace: corgi-project
+spec:
+  replicas: 1
+  # 用来查找关联的 Pod，所有标签都匹配才行
+  selector:
+    matchLabels:
+      app: pzblog
+  # 定义 Pod 相关数据
+  template:
+    metadata:
+      labels:
+        app: pzblog
+    spec:
+      imagePullSecrets:
+        - name: txcloud-docker-registry  # 提前在项目下配置访问腾讯云的账号密码
+      # 定义容器，可以多个
+      containers:
+        - name: pzblog # 容器名字
+          # ccr.ccs.tencentyun.com/corgi_project/ks-test:latest
+          image: $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$GIT_COMMIT # 配合 jenkins 使用的镜像
+          imagePullPolicy: Always

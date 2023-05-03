@@ -1,0 +1,19 @@
+kind: Ingress
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: ks-test
+  namespace: test
+  annotations:
+    kubesphere.io/creator: admin
+spec:
+  rules:
+    - host: shimada666.corgi.plus
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: pzblog-svc
+                port:
+                  number: 80
