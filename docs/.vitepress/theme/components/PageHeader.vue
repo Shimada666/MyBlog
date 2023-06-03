@@ -2,9 +2,8 @@
 import { useData } from 'vitepress'
 import { useCurrentPage } from '../../../page-util'
 import dayjs from 'dayjs'
-import { DefaultTheme } from 'vitepress/types/default-theme'
 
-const { page, theme } = useData<DefaultTheme.Config>()
+const { page, theme } = useData()
 const { isPost } = useCurrentPage()
 </script>
 
@@ -20,7 +19,7 @@ const { isPost } = useCurrentPage()
       </div>
       <h1>{{ page.title }}</h1>
       <div class="subheading">{{ page.frontmatter.subTitle }}</div>
-      <span class="meta">{{ theme.lastUpdated }} on {{ dayjs(page.lastUpdated || + new Date()).format('YYYY-MM-DD') }}</span>
+      <span class="meta">{{ theme.lastUpdatedText }} on {{ dayjs(page.lastUpdated || + new Date()).format('YYYY-MM-DD') }}</span>
     </div>
   </div>
 </template>
@@ -180,6 +179,9 @@ const { isPost } = useCurrentPage()
     @media only screen and (min-width: 768px) {
       h1 {
         font-size: 55px;
+        margin: 24px 0;
+        font-weight: 600;
+        line-height: 1.25;
       }
       .subheading {
         font-size: 30px;

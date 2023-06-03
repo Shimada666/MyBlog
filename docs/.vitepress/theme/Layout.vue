@@ -11,19 +11,19 @@ const { Layout } = DefaultTheme
 <template>
   <div>
     <Layout>
-      <template #page-bottom-ads>
-        <ClientOnly>
-          <Comment />
-        </ClientOnly>
-      </template>
-      <template #page-top>
+      <!--<template #page-bottom-ads>-->
+      <!--  <ClientOnly>-->
+      <!--    <Comment />-->
+      <!--  </ClientOnly>-->
+      <!--</template>-->
+      <template #doc-before>
         <PageHeader />
       </template>
       <!-- Home slot-->
-      <template #home-hero>
+      <template #home-features-before>
         <Intro />
       </template>
-      <template #home-features>
+      <template #home-features-after>
         <Pages />
       </template>
     </Layout>

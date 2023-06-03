@@ -9,14 +9,14 @@ export default defineConfig({
   lastUpdated: true,
   // 主题配置
   themeConfig: {
-    lastUpdated: 'Last Updated',
+    lastUpdatedText: 'Last Updated',
     nav: [
       { text: '主页', link: '/' },
       // { text: '分类', link: '/tags' },
       { text: 'Github', link: 'https://github.com/Shimada666' }
-    ],
-    nextLinks: true,
-    prevLinks: true
+    ]
+    // nextLinks: true,
+    // prevLinks: true
   },
   markdown: {
     config: (md) => {
