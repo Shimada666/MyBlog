@@ -2,7 +2,7 @@ FROM ccr.ccs.tencentyun.com/corgi/node:16-slim AS build
 WORKDIR /app
 COPY . /app
 
-RUN apt install -y git
+RUN apt update && apt install -y git
 RUN pnpm i && pnpm docs:build
 
 FROM nginx:stable-alpine
